@@ -19,15 +19,17 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     background-color: rgb(10, 9, 9);
+    align-items: center;
+    flex-wrap: wrap;
+    
 }
 
 header h3 {
     font-weight: bold;
     font-size: 1.75vw;
     color: var(--primary-color);
-    margin: 10px 10px;
+    padding: 0 20px;
 }
 
 header h3 a:hover {
@@ -41,7 +43,7 @@ header a {
 }
 
 header nav {
-    margin: 15px 0 0 0;
+    margin: 10px 0 10px 0;
 }
 
 header nav ul {
@@ -139,7 +141,7 @@ section {
 }
 
 .main-project img {
-    width: 700px;
+    width: 75%
 }
 
 .main-project h4 {
@@ -173,8 +175,6 @@ section {
 
 /* CONTACT ME SECTION */
 
-
-
 .get-in-touch {
     font-weight: lighter;
     color: white;
@@ -192,32 +192,32 @@ section {
 }
 
 
-/* Copied from Run Buddy */
+/* Copied from Run Buddy, then Modified */
 .contact-form input, .contact-form textarea {
-    border: 1px solid var(--secondary-color);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: var(--secondary-color);
-    width: 100%;
+    width: 450px;
     margin-bottom: 15px;
     margin-top: 5px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgb(31, 30, 30);
+    border: none;
+    
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
-    background-color: rgba(255, 255, 255, 1);
+    background-color:var(--secondary-color);
     outline: none;
 }
 
 .contact-form button {
-    width: 100%;
+    width: 450px;
     border: none;
-    background: var(--primary-color);
+    background: rgb(31, 30, 30);
     color: var(--secondary-color);
     text-align: center;
-    padding: 15px 0;
+    padding: 9px 0;
     font-size: 16px;
     border-radius: 10px;
 }
@@ -225,4 +225,57 @@ section {
 .contact-form button:hover {
     color: #121212;
     background: var(--secondary-color);
+}
+
+/* MEDIA QUERIES  */
+
+/* For Phones and Tablets */
+
+@media screen and (max-width: 980px) {
+    header {   
+        justify-content: center;
+    }
+
+    header h3 {
+        font-size: 20px;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 938px) {
+
+    header h3 {
+        font-size: 30px;
+    }
+
+    header nav ul li a {
+        font-size: 30px;
+    }
+
+    .aboutme {
+        justify-content: center;
+    }
+
+    .personal-bio {
+        order: 1;
+        text-align: center;
+    }
+    .main-project img {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+    }
+    
+    .contact-form button {
+        width: 100%;
+    }
+
+    
 }
