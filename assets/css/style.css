@@ -25,7 +25,7 @@ header {
 
 header h3 {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.75vw;
     color: var(--primary-color);
     margin: 10px 10px;
 }
@@ -41,7 +41,7 @@ header a {
 }
 
 header nav {
-    margin: 13px 0;
+    margin: 15px 0 0 0;
 }
 
 header nav ul {
@@ -59,8 +59,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    border-radius: 7px;
-    font-size: 18px;
+    font-size: 1.65vw;
     color: var(--secondary-color);
 }
 
@@ -91,6 +90,10 @@ section {
     margin: 0 0 25px 0;
 }
 
+.personal-bio p {
+    line-height: 1.5;
+}
+
 .personal-photo {
     flex: 0 12%;
     margin: 4.5%;
@@ -99,4 +102,127 @@ section {
 .personal-photo img {
     border-radius: 50%;
     box-shadow: 14px 6px 3px rgba(23, 120, 242, 0.75);
+}
+
+/* LIST OF SKILLS AND ABILITIES */
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    
+}
+
+.skills img{
+    margin: 0 10px 0 10px;
+    padding: 13px;
+    height: 100px;
+    width: 100px;  
+}
+
+
+/* MY WORK SECTION */
+
+.section-title{
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 50px;
+    border-top: 2px solid var(--secondary-color);
+    width: 40%;
+    padding: 80px 0 50px 0;
+    text-align: center;
+    margin: 0 auto 20px auto;
+}
+
+.main-project {
+    text-align: center;
+}
+
+.main-project img {
+    width: 700px;
+}
+
+.main-project h4 {
+    font-weight: lighter;
+    font-size: 18px;
+    color: var(--primary-color)
+}
+
+.secondary-projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 40px;
+}
+
+.project {
+    width: 225px;
+    padding: 12px 12px 12px 12px;
+}
+
+.project img {
+    width: 100%;
+}
+
+.project h4 {
+    font-weight: lighter;
+    font-size: 15px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* CONTACT ME SECTION */
+
+
+
+.get-in-touch {
+    font-weight: lighter;
+    color: white;
+    text-align: start;
+    font-size: 18px;
+}
+
+.get-in-touch h4 {
+    font-size: 27px;
+}
+
+.get-in-touch a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+
+/* Copied from Run Buddy */
+.contact-form input, .contact-form textarea {
+    border: 1px solid var(--secondary-color);
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: var(--secondary-color);
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: rgba(255, 255, 255, 1);
+    outline: none;
+}
+
+.contact-form button {
+    width: 100%;
+    border: none;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.contact-form button:hover {
+    color: #121212;
+    background: var(--secondary-color);
 }
