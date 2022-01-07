@@ -7,6 +7,6 @@ The link to deployed website: https://jonathanprill.github.io/jonathanprillportf
 
 <!-- got code for pasting screenshots here: https://stackoverflow.com/questions/10189356/how-to-add-screenshot-to-readmes-in-github-repository -->
 
-![ScreenShot](/jonathanprillportfolio/assets/images/jonathanprill.github.io_jonathanprillportfolio_ "screenshot1")
+![ScreenShot](/jonathanprillportfolio/assets/images/jonathanprill.github.io_jonathanprillportfolio_.png "screenshot1")
 
-![ScreenShot](/jonathanprillportfolio/assets/images/jonathanprill.github.io_jonathanprillportfolio_ "screenshot1")
+![ScreenShot](/jonathanprillportfolio/assets/images/jonathanprill.github.io_jonathanprillportfolio_iPhoneX.png "screenshot1")
