@@ -276,6 +276,13 @@ section {
     .contact-form button {
         width: 100%;
     }
+    .personal-bio {
+        margin: 0;
+        width: 100%;;
+    }
 
+    .section-title {
+        width: 88%;
+    }
     
 }
