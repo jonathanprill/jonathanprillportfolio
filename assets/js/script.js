@@ -1,105 +1,93 @@
-const lineLeft = document.querySelectorAll("#section-lines");
+const toggleLine = document.querySelectorAll("#toggle-me");
+const toggleDrip = document.querySelector("#toggle-me-drip");
+const toggleHr = document.querySelector("#toggle-me-hr");
+const toggleBox = document.querySelector("#toggle-me-box");
+const toggleDiv = document.querySelector("#toggle-me-div");
+const toggleTitleLine = document.querySelector("#toggle-me-title-line");
+const toggleTitleText = document.querySelector("#toggle-me-title-text");
+const toggleContactLine = document.querySelector("#toggle-me-contact-line");
+const toggleContactText = document.querySelector("#toggle-me-contact-text");
+const toggleAboutLine = document.querySelector("#toggle-me-about-line");
+const toggleAboutText = document.querySelector("#toggle-me-about-text");
+const toggleSkillsLine = document.querySelector("#toggle-me-skills-line");
+const toggleSkillsText = document.querySelector("#toggle-me-skills-text");
+
 
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         entry.target.classList.toggle("activate", entry.isIntersecting)
         //creates a rule that once animation has played, it wont play again if you scroll up and down
-        if (entry.isIntersecting) observer.unobserve(entry.target)
+
+        if (entry.isIntersecting) {
+            observer.unobserve(entry.target)
+            runDrip(entry);
+            runHr(entry);
+            runBox(entry);
+            runDiv(entry);
+            // runTtileLine(entry);
+            // runTtileText(entry);
+            // runContactLine(entry);
+            // runContactText(entry);
+            // runAboutLine(entry);
+            // runAboutText(entry);
+        }
     })
+
 },
-{
-
-    
-    //rule regarding percentage of item on screen
-    // threshold: 0,
-
-    //rule giving border margin to start animation
-    rootMargin: "-10px -10px -60% -10px"
-}
+    {
+        rootMargin: "-10px -10px -64% -10px"
+    }
 );
 
 
-lineLeft.forEach(card => {
+toggleLine.forEach(card => {
     observer.observe(card)
 });
 
-///////////////////////NEW////////////////////////
-
-const boxAnimation = document.querySelectorAll("#box-feature");
-
-
-const observerTwo = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        entry.target.classList.toggle("activate-box", entry.isIntersecting)
-        //creates a rule that once animation has played, it wont play again if you scroll up and down
-        if (entry.isIntersecting) observerTwo.unobserve(entry.target)
-    })
-},
-{
-
-    
-    //rule regarding percentage of item on screen
-    // threshold: 0,
-
-    //rule giving border margin to start animation
-    rootMargin: "-10px -10px -20% -10px"
+function runDrip(entry) {
+    toggleDrip.classList.toggle("activate", entry)
+    if (entry) observer.unobserve(entry.target)
 }
-);
 
-boxAnimation.forEach(card => {
-    observerTwo.observe(card)
-});
-
-
-//////////////////lower hr line/////////////////////////
-const lineAnimation = document.querySelectorAll("#lower-section-line");
-
-
-const observerThree = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        entry.target.classList.toggle("activate-line", entry.isIntersecting)
-        //creates a rule that once animation has played, it wont play again if you scroll up and down
-        if (entry.isIntersecting) observerThree.unobserve(entry.target)
-    })
-},
-{
-
-    
-    //rule regarding percentage of item on screen
-    // threshold: 0,
-
-    //rule giving border margin to start animation
-    rootMargin: "-10px -10px -34% -10px"
+function runHr(entry) {
+    toggleHr.classList.toggle("activate", entry)
+    if (entry) observer.unobserve(entry.target)
 }
-);
-
-lineAnimation.forEach(card => {
-    observerThree.observe(card)
-});
-
-//////////////////hidden div/////////////////////////
-const divAnimation = document.querySelectorAll("#hidden-div");
 
 
-const observerFour = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        entry.target.classList.toggle("activate-div", entry.isIntersecting)
-        //creates a rule that once animation has played, it wont play again if you scroll up and down
-        if (entry.isIntersecting) observerFour.unobserve(entry.target)
-    })
-},
-{
-
-    
-    //rule regarding percentage of item on screen
-    // threshold: 0,
-
-    //rule giving border margin to start animation
-    rootMargin: "-10px -10px -18% -10px"
+function runBox(entry) {
+    toggleBox.classList.toggle("activate", entry)
+    if (entry) observer.unobserve(entry.target)
 }
-);
 
-divAnimation.forEach(card => {
-    observerFour.observe(card)
-});
+function runDiv(entry) {
+    toggleDiv.classList.toggle("activate", entry)
+    if (entry) observer.unobserve(entry.target)
+}
+
+// Navigation
+const tabs = document.querySelectorAll('.tabs li');
+const tabContentBoxes = document.querySelectorAll('#tab-content > div');
+
+tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+        //removes class from all tabs when clicked
+        tabs.forEach(item => item.classList.remove('is-active'))
+        tab.classList.add('is-active')
+
+        const target = tab.dataset.mickeymouse;
+        tabContentBoxes.forEach(box => {
+            if (box.getAttribute('id') === target) {
+                box.classList.remove('is-hidden');
+            } else {
+                box.classList.add('is-hidden');
+            }
+        })
+    })
+})
+
+
+
+
+
