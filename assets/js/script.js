@@ -87,7 +87,34 @@ tabs.forEach((tab) => {
     })
 })
 
+////////////////////////////////////////////////////////////////////////////
+
+//NEW CODE SORTABLE
+$(".list-group").sortable({
+    scroll: false,
+    activate: function () {
+        $(".bottom-trash").addClass("bottom-trash-drag")
+        $(".left-door").addClass("left-door-active")
+        $(".right-door").addClass("right-door-active")
+    },
+    deactivate: function () {
+        $(".bottom-trash").removeClass("bottom-trash-drag")
+        $(".left-door").removeClass("left-door-active")
+        $(".right-door").removeClass("right-door-active")
+    }
+});
 
 
 
+//NEW CODE - DRAGGABLE TO TRASH
+$("#trash").droppable({
+    drop: function (event, ui) {
+        console.log(ui.draggable[0].classList[0])
+        window.open("https://" + ui.draggable[0].classList[0] + "/", "_blank")
+        // Launch URL HERE
+
+        // ui.draggable.remove();
+
+    },
+});
 
