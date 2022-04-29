@@ -330,7 +330,7 @@ hr {
 
 /* Section Animations*/
 .title-line {
-    border-right: 1vmin solid black;
+    border-right: 5px solid white;
     left: 0px;
     top: 100px;
     line-height: 0;
@@ -338,9 +338,9 @@ hr {
     padding: 0;
     position: absolute;
     overflow: hidden;
-    color: black;
+    color: white;
     font-family: 'Aldrich', sans-serif;
-    animation: showLine 1.25s forwards;
+    animation: showLine 1s forwards;
 }
 
 @keyframes showLine {
@@ -349,14 +349,14 @@ hr {
     }
 
     100% {
-        line-height: 9vh;
+        line-height: 2rem;
     }
 }
 
 .title-text {
     transform: translate(100%, 0);
     padding-right: 20px;
-    color: black;
+    color: white;
     animation: showTitleText 0.4s forwards 1.5s;
 }
 
