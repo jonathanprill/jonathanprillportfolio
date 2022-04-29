@@ -375,6 +375,7 @@ hr {
 /* /////////////////////////////////////////////////////////////////////// */
 
 /* TRASH */
+
 .bottom-trash {
     border: 4px solid gray;
     opacity: 0;
@@ -388,7 +389,7 @@ hr {
 }
 
 .bottom-trash-drag {
-    transform: translateY(0);
+    transform: translateY(8vh);
     opacity: 1;
 }
 
