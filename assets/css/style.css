@@ -2,21 +2,21 @@
     box-sizing: border-box;
 }
 
-body {
+.sev-body {
     margin: 0;
     /* background-color: white; */
     background-image: linear-gradient(to top, rgb(19, 19, 19), #708772);
 
 }
 
-.wrapper {
+.sev-wrapper {
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
 }
 
-header {
+.sev-header {
     font-family: 'Goldman', cursive;
     /* font-family: 'Aldrich', sans-serif; */
     font-size: 4rem;
@@ -24,7 +24,7 @@ header {
     transform-style: preserve-3d;
 }
 
-.name {
+.sev-name {
     margin-bottom: 50vh;
     display: flex;
     transform: translateZ(-100px) scale(10);
@@ -34,7 +34,7 @@ header {
     z-index: -1;
 }
 
-.occupation {
+.sev-occupation {
     transform: translateZ(-40px) scale(4);
     margin-bottom: 0;
     display: flex;
@@ -44,7 +44,7 @@ header {
     z-index: -1;
 }
 
-section {
+.sev-section {
     min-height: 100%;
     z-index: 1;
     background: radial-gradient(#072F43, #051018);
@@ -59,7 +59,7 @@ section {
 
 /* DRIP */
 
-.cont {
+.sev-cont {
     width: 100%;
     height: 250px;
     overflow: hidden;
@@ -67,7 +67,7 @@ section {
     padding-top: 77px;
 }
 
-.drip.activate {
+.sev-drip.activate {
     border-color: black;
     width: 100px;
     height: 100px;
@@ -102,14 +102,14 @@ section {
 
 }
 
-hr {
+.sev-hr {
     height: 15px;
     border-width: 0;
     color: black;
     background-color: black;
 }
 
-.lower-section-line {
+.sev-lower-section-line {
     width: 80px;
     border-width: 0;
     color: transparent;
@@ -117,7 +117,7 @@ hr {
     margin-top: 47px;
 }
 
-.lower-section-line.activate {
+.sev-lower-section-line.activate {
     animation: lower-hr 2s ease-out forwards 0.9s;
 }
 
@@ -135,29 +135,29 @@ hr {
     }
 }
 
-.section-line-left {
+.sev-section-line-left {
     transform: translateX(-99%);
     transition: 1s;
     margin-top: -78px;
 }
 
-.section-line-right {
+.sev-section-line-right {
     transform: translateX(99%);
     transition: 1s;
     margin-top: -23px;
 }
 
 
-.section-line-left.activate {
+.sev-section-line-left.activate {
     transform: translateX(-50%);
     animation: line-in-left 1s linear forwards;
 }
 
-.section-line-right.activate {
+.sev-section-line-right.activate {
     transform: translateX(50%);
 }
 
-.box-feature {
+.sev-box-feature {
     border-radius: 8px;
     border: 15px solid transparent;
     background-color: transparent;
@@ -171,7 +171,7 @@ hr {
     right: 0;
 }
 
-.box-feature.activate {
+.sev-box-feature.activate {
     animation: border-animate 5s forwards 2.8s;
 }
 
@@ -223,7 +223,7 @@ hr {
     }
 }
 
-.revealed-content {
+.sev-revealed-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -233,7 +233,7 @@ hr {
 }
 
 
-.revealed-content.activate {
+.sev-revealed-content.activate {
     animation: show-div 2s linear forwards 5s;
 
 }
@@ -254,19 +254,19 @@ hr {
     }
 }
 
-.box-feature::-webkit-scrollbar {
+.sev-box-feature::-webkit-scrollbar {
     display: none;
 }
 
 
 
 /* Bulma Inherit */
-.tabs {
+.sev-tabs {
     width: 100%;
     margin-top: -220px;
 }
 
-.tabs ul {
+.sev-tabs ul {
     align-items: center;
     border-bottom-color: #dbdbdb;
     border-bottom-style: solid;
@@ -279,7 +279,7 @@ hr {
     padding: 0;
 }
 
-.tabs a {
+.sev-tabs a {
     align-items: center;
     border-bottom-color: #dbdbdb;
     border-bottom-style: solid;
@@ -294,16 +294,16 @@ hr {
     text-decoration: none;
 }
 
-.is-hidden {
+.sev-is-hidden {
     display: none !important;
 }
 
-.tabs li.is-active a {
+.sev-tabs li.sev-is-active a {
     border-bottom-color: #708772;
     color: #708772;
 }
 
-.tabs a:hover {
+.sev-tabs a:hover {
     border-bottom-color: #363636;
     color: #363636;
 }
@@ -312,24 +312,24 @@ hr {
 
 
 
-.initials {
+.sev-initials {
     font-size: 2rem;
     font-family: 'Aldrich', sans-serif;
     padding: 0 0 0 0;
 }
 
-.page-content {
+.sev-page-content {
     width: 100%;
 }
 
-.section-header {
+.sev-section-header {
     font-family: 'Aldrich', sans-serif;
     font-size: 1rem;
     color: black;
 }
 
 /* Section Animations*/
-.title-line {
+.sev-title-line {
     border-right: 5px solid white;
     left: 0px;
     top: 100px;
@@ -353,7 +353,7 @@ hr {
     }
 }
 
-.title-text {
+.sev-title-text {
     transform: translate(100%, 0);
     padding-right: 20px;
     color: white;
@@ -376,7 +376,7 @@ hr {
 
 /* TRASH */
 
-.bottom-trash {
+.sev-bottom-trash {
     border: 4px solid gray;
     opacity: 0;
     color: #f1f1f1;
@@ -388,24 +388,24 @@ hr {
     height: 160px;
 }
 
-.bottom-trash-drag {
+.sev-bottom-trash-drag {
     transform: translateY(8vh);
     opacity: 1;
 }
 
-.doors {
+.sev-doors {
     margin-top: 14px;
     display: flex;
     justify-content: center;
 }
 
-.left-door {
+.sev-left-door {
     width: 75px;
     border: 4px solid gray;
     background-color: gray;
 }
 
-.left-door-active {
+.sev-left-door-active {
     animation: open-left-door 1s forwards 1s;
 }
 
@@ -421,13 +421,13 @@ hr {
     }
 }
 
-.right-door {
+.sev-right-door {
     width: 75px;
     border: 4px solid gray;
     background-color: gray;
 }
 
-.right-door-active {
+.sev-right-door-active {
     animation: open-right-door 1s forwards 1s;
 }
 
@@ -443,20 +443,25 @@ hr {
     }
 }
 
-.trash-labels {
+.sev-trash-labels {
     display: flex;
 
     justify-content: space-around;
 }
 
-.drop-box {
+.sev-drop-box {
     border: 3px solid gray;
     padding: 4px 75px;
 }
 
 /* ////////////////// */
 
-.cards {
+.sev-sev-sub-header {
+    animation: card-fade 1.5s ease-in forwards 1.25s;
+    opacity: 0;
+}
+
+.sev-cards {
     opacity: 0;
     animation: card-fade 1.5s ease-in forwards 1.25s;
     display: flex;
@@ -467,7 +472,7 @@ hr {
 }
 
 
-.card {
+.sev-card {
     margin: 2%;
     width: 140px;
     height: 140px;
@@ -479,19 +484,19 @@ ul {
 
 
 
-.list-group {
+.sev-list-group {
     padding: 0;
     width: 100%;
     height: 100%;
 }
 
-.list-group-item {
+.sev-list-group-item {
     border: 2px solid gray;
     width: 100%;
     height: 100%;
 }
 
-.card-content {
+.sev-card-content {
     color: black;
     font-family: 'Press Start 2P';
     font-size: 10px;
@@ -501,20 +506,20 @@ ul {
     flex-wrap: wrap;
 }
 
-.card-icon {
+.sev-card-icon {
     font-size: 28px;
     width: 100%;
     text-align: center;
 }
 
-.card-title {
+.sev-card-title {
     width: 100%;
     font-size: 16px;
     text-align: center;
     margin-top: -7px;
 }
 
-.card-desc {
+.sev-card-desc {
     width: 100%;
     font-size: 12px;
     text-align: center;
