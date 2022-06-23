@@ -9,7 +9,7 @@ function App() {
   
   return (
 
-    <BrowserRouter basename="/dev-jtp/" >
+    <BrowserRouter basename="/jonathanprillportfolio/" >
       <Nav />
       <Routes>
         <Route

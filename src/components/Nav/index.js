@@ -33,17 +33,17 @@ const Nav = () => {
               <SpeedDialAction
                 icon={<MaterialSymbolsDarkMode/>}
                 tooltipTitle='Dark Theme'
-                href='/dev-jtp'
+                href='/jonathanprillportfolio'
               />
               <SpeedDialAction
                 icon={<WpfRetroTv/>}
                 tooltipTitle='Retro Theme'
-                href='/dev-jtp/retro-theme/'
+                href='/jonathanprillportfolio/retro-theme/'
               />
               <SpeedDialAction
                 icon={<CiApple/>}
                 tooltipTitle='Severance Theme'
-                href='/dev-jtp/severance-theme/'
+                href='/jonathanprillportfolio/severance-theme/'
               />
         
           </SpeedDial>
